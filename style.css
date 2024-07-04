@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
 :root {
     --dark-blue-100: #609ED4;
     --dark-blue-200: #356EA9;
@@ -19,12 +21,72 @@
 }
 
 * {
+    font-family: "Inter", sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    height: 100vh;
+body{
+    background-color: var(--light-blue-100);
+}
+
+main {
     display: flex;
+    justify-content: space-between;
+    min-width: 100%;
+    height: 100vh;
+    padding: 2.5rem;
+}
+
+.text-container {
+    
+}
+
+.text-area {
+    border: none;
+    color: #0A3871;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+::placeholder {color: #0A3871;}
+    .text-area{
+        outline: none;
+    }   
+/* Container com o resultado do desencriptador */
+
+.result-container {
+    width: 25%;
+    background-color: #FFF;
+    display: flex;  
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    text-align: center;
+    gap: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.result-container img {
+    width: 100%;
+}
+
+.result-text {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    width: 80%;
+}
+
+.result-text h2 {
+    font-size: 1.5rem;
+    color: var(--gray-500);
+    font-weight: bold;
+}
+
+.result-text p {
+    color: var(--gray-400);
+    font-size: 1rem;
 }
