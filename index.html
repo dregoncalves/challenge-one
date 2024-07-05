@@ -3,24 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Challenge - Alura + One</title>
 </head>
 <body>
     <main>
         <section class="text-container">
-            <img src="img/Alura.svg" alt="Logo da Alura">
-            <div>
-                <textarea class="text-area" cols="70" rows="6" placeholder="Digite seu texto"></textarea>
-            </div>
-            <div class="text-validation">
-                <img src="img/vector.svg" alt="">
-                <p>Apenas letras minúsculas e sem acento.</p>
-            </div>
-            <div class="btn-container">
-                <button>Criptografar</button>
-                <button>Descriptografar</button>
-            </div>
+            <img src="img/Alura.svg" class="alura-logo" alt="Logo da Alura">
+            <textarea id="text-area" type="text" placeholder="Digite seu texto"></textarea>
+        
+            <section>
+                <div class="info-line">
+                    <img src="img/vector.svg" alt="">
+                    <p>Apenas letras minúsculas e sem acento.</p>
+                </div>
+                <div class="btn-container">
+                    <button class="btn-criptografar">Criptografar</button>
+                    <button class="btn-descriptografar">Descriptografar</button>
+                </div>
+            </section>
         </section>
         <section class="result-container">
             <img src="img/result-img.svg" alt="Garoto usando uma lupa">
@@ -30,5 +31,7 @@
             </div>
         </section>
     </main>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
