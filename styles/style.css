@@ -85,9 +85,9 @@ textarea::placeholder {
 }
 
 .btn-container button{
-    margin-right: 2rem;
-    margin-top: 1rem;
-    padding: 1rem 6rem;
+    margin: 1rem 0;
+    padding: 1rem;
+    width: 47%;
     border-radius: 1.5rem;
     border: 2px solid var(--dark-blue-300);
     font-size: 1rem;
@@ -113,7 +113,7 @@ textarea::placeholder {
 /* Container com o resultado do desencriptador */
 
 .result-container {
-    width: 25%;
+    width: 30%;
     background-color: #FFF;
     display: flex;  
     flex-flow: column nowrap;
@@ -127,14 +127,14 @@ textarea::placeholder {
 }
 
 .result-container img {
-    width: 100%;
+    width: 90%;
 }
 
 .result-text {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column nowrap;
     gap: 1rem;
-    width: 80%;
+    width: 90%;
 }
 
 .result-text h2 {
@@ -146,4 +146,28 @@ textarea::placeholder {
 .result-text p {
     color: var(--gray-400);
     font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .text-container {
+        width: 100%;
+        height: 80%;
+    }
+
+    textarea {
+        height: 50%;
+    }
+
+    .result-container {
+        height: 20%;
+        width: 100%;
+    }
+    
+    .result-container img {
+        display: none;
+    }
 }
