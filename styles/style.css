@@ -34,7 +34,7 @@ body{
 main {
     display: flex;
     justify-content: space-between;
-    min-width: 100%;
+    width: 100%;
     height: 100vh;
     padding: 2.5rem;
 }
@@ -63,6 +63,7 @@ textarea {
     font-size: 1.5rem;
     background-color: transparent;
     resize: none;
+    margin: 1rem 0;
 }
 
 textarea::placeholder {
@@ -70,7 +71,7 @@ textarea::placeholder {
 }
 
 .text-container img {
-    width: 2%;
+    width: 1rem;
 }  
 
 .info-line {
@@ -85,10 +86,10 @@ textarea::placeholder {
 }
 
 .btn-container button{
-    margin: 1rem 0;
+    margin: 1rem 0 2rem 0;
     padding: 1rem;
     width: 47%;
-    border-radius: 1.5rem;
+    border-radius: 2rem;
     border: 2px solid var(--dark-blue-300);
     font-size: 1rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -96,7 +97,7 @@ textarea::placeholder {
     transition: all ease-in-out 0.2s;
 }
 
-.btn-container button:hover {
+.btn-container button:hover, .btn-copiar:hover {
     transform: scale(104%);
 }
 
@@ -105,8 +106,8 @@ textarea::placeholder {
     color: #FFF;
 }
 
-.btn-container .btn-descriptografar {
-    background-color: #D8DFE8;
+.btn-container .btn-descriptografar, .btn-copiar {
+    background-color: transparent;
     color: var(--dark-blue-300);
 }
 
@@ -116,7 +117,7 @@ textarea::placeholder {
     width: 30%;
     background-color: #FFF;
     display: flex;  
-    flex-flow: column nowrap;
+    flex-flow: column;
     align-items: center;
     justify-content: center;
     padding: 2rem;
@@ -124,28 +125,54 @@ textarea::placeholder {
     text-align: center;
     gap: 2rem;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    overflow-x: hidden; 
 }
-
 .result-container img {
     width: 90%;
 }
 
-.result-text {
+.no-result-text {
     display: flex;
-    flex-flow: column nowrap;
+    flex-flow: column;
     gap: 1rem;
     width: 90%;
 }
 
-.result-text h2 {
+.no-result-text h2 {
     font-size: 1.5rem;
     color: var(--gray-500);
     font-weight: bold;
 }
 
-.result-text p {
+.no-result-text p {
     color: var(--gray-400);
     font-size: 1rem;
+
+}
+
+.result-text {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.result-text p {
+    font-size: 1.5rem;
+    color: var(--gray-400);
+    word-wrap: break-word;
+    text-align: left;
+}
+
+.btn-copiar {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 2rem;
+    border: 2px solid var(--dark-blue-300);
+    font-size: 100%;
+    cursor: pointer;
+    transition: all ease-in-out 0.2s;
 }
 
 @media only screen and (max-width: 768px) {
@@ -163,11 +190,34 @@ textarea::placeholder {
     }
 
     .result-container {
-        height: 20%;
+        height: 60%;
+        width: 100%;
+    }
+
+    .result-text {
         width: 100%;
     }
     
     .result-container img {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    main {
+        padding: 2.5rem 1.5rem;
+    }
+
+    .btn-container {
+        flex-direction: column;
+    }
+
+    .btn-container .btn-descriptografar {
+        margin-bottom: 1rem;
+    }
+
+    .btn-container button {
+        width: 100%;
+        margin: 0.5rem 0;
     }
 }
