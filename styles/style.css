@@ -175,7 +175,7 @@ textarea::placeholder {
     transition: all ease-in-out 0.2s;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
     main {
         flex-direction: column;
     }
@@ -203,7 +203,7 @@ textarea::placeholder {
     }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 500px) {
     main {
         padding: 2.5rem 1.5rem;
     }
